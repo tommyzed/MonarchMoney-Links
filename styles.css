@@ -1,0 +1,40 @@
+/* MonarchMoney Links — injected styles */
+
+#mm-links-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+#mm-links-label {
+  /* Matches the "Notes" label style in Monarch's dark UI */
+  font-size: 13px;
+  font-weight: 500;
+  color: #a0a0a0;
+  letter-spacing: 0.01em;
+}
+
+#mm-links-container {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#mm-links-container a {
+  color: #6cb5f5;
+  text-decoration: none;
+  font-size: 14px;
+  word-break: break-all;
+  line-height: 1.5;
+  transition: color 0.15s ease;
+}
+
+#mm-links-container a:hover {
+  color: #9dd1ff;
+  text-decoration: underline;
+}

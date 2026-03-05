@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "MonarchMoney Links",
+  "version": "1.0",
+  "description": "Makes URLs in Monarch Money transaction Notes clickable by injecting a Links section.",
+  "content_scripts": [
+    {
+      "matches": ["https://app.monarch.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
