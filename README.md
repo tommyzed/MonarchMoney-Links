@@ -1,4 +1,5 @@
 # MonarchMoney Links
+<img width="128" height="128" alt="icon128" src="https://github.com/user-attachments/assets/00d0b292-b442-4952-b51f-57987b3ec40f" />
 
 A Chrome Extension that makes URLs in [Monarch Money](https://app.monarch.com) transaction Notes clickable.
 
