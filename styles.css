@@ -5,36 +5,40 @@
   flex-direction: column;
   gap: 8px;
   margin-bottom: 16px;
+  padding-top: 16px;
 }
 
 #mm-links-label {
-  /* Matches the "Notes" label style in Monarch's dark UI */
-  font-size: 13px;
-  font-weight: 500;
-  color: #a0a0a0;
-  letter-spacing: 0.01em;
+  /* Matches native field labels: Goal, Notes, Type — white, semibold, ~15px */
+  font-size: 15px;
+  font-weight: 600;
+  color: #39d353;
+  letter-spacing: 0em;
 }
 
 #mm-links-container {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* Matches the Type/Notes input box: slightly lighter dark bg, subtle border */
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 8px;
-  padding: 10px 14px;
+  padding: 12px 16px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }
 
 #mm-links-container a {
-  color: #6cb5f5;
+  /* Monarch's own link blue, matches "View 1 transaction" color */
+  color: #4a9ee8;
   text-decoration: none;
   font-size: 14px;
+  font-weight: 400;
   word-break: break-all;
   line-height: 1.5;
   transition: color 0.15s ease;
 }
 
 #mm-links-container a:hover {
-  color: #9dd1ff;
+  color: #7bbef2;
   text-decoration: underline;
 }
