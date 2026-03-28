@@ -65,7 +65,7 @@ function selectYearToDate(singleValue) {
     // Check the scoped container first, then fall back to document-wide
     const scopeRoot = container || document;
     const menu = scopeRoot.querySelector('.react-select__menu') ||
-                  document.querySelector('.react-select__menu');
+      document.querySelector('.react-select__menu');
     console.log(`[MM-Links] Poll ${pollCount}: menu=`, menu);
 
     if (menu) {
@@ -207,9 +207,6 @@ setInterval(() => {
     onSpaNavigate();
   }
 }, 500);
-
-
-
 
 const LINKS_SECTION_ID = 'mm-links-section';
 
