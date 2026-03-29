@@ -1,5 +1,5 @@
 # MonarchMoney Plus
-<img width="128" height="128" alt="icon128" src="https://github.com/user-attachments/assets/00d0b292-b442-4952-b51f-57987b3ec40f" />
+<img width="128" height="128" alt="icon128" src="https://github.com/user-attachments/assets/9ddab607-953a-40e1-b3de-08eb9fa9f92e" />
 
 A Chrome Extension that enhances [Monarch Money](https://app.monarch.com) with clickable links in transaction Notes and automatic dashboard timeframe selection.
 
