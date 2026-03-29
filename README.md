@@ -35,6 +35,12 @@ Click the extension icon in the Chrome toolbar to configure:
 Settings are saved via `chrome.storage.sync` and take effect immediately — no page reload required.
 
 ## Demo
+Settings:
+
+<img width="282" height="280" alt="Screenshot 2026-03-29 at 1 25 15 PM" src="https://github.com/user-attachments/assets/39cc50ff-3160-42bf-b36c-d4eb4e9da024" />
+
+Links:
+
 <img width="675" height="382" alt="Screenshot 2026-03-05 at 10 18 30 AM" src="https://github.com/user-attachments/assets/a282687a-62d1-4aa9-80d5-2c7b7ade0daa" />
 
 ## How It Works
