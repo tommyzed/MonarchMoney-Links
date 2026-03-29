@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MonarchMoney Plus Settings</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <h1 class="popup-title">MonarchMoney Plus</h1>
+
+    <div class="setting-group">
+      <label class="setting-row" for="linksEnabled">
+        <span class="setting-label">Links in Notes</span>
+        <input type="checkbox" id="linksEnabled" checked>
+        <span class="toggle"></span>
+      </label>
+      <p class="setting-desc">Extract and display clickable URLs from transaction notes.</p>
+    </div>
+
+    <hr class="divider">
+
+    <div class="setting-group">
+      <label class="setting-row" for="timeframeEnabled">
+        <span class="setting-label">Auto-Select Timeframe</span>
+        <input type="checkbox" id="timeframeEnabled" checked>
+        <span class="toggle"></span>
+      </label>
+      <p class="setting-desc">Automatically switch the dashboard date-range on page load.</p>
+    </div>
+
+    <div class="setting-group sub-setting" id="timeframeSelectGroup">
+      <label class="setting-label" for="timeframeValue">Default Timeframe</label>
+      <select id="timeframeValue">
+        <option value="1 month">1 month</option>
+        <option value="3 months">3 months</option>
+        <option value="6 months">6 months</option>
+        <option value="Year to date" selected>Year to date</option>
+        <option value="1 year">1 year</option>
+        <option value="All time">All time</option>
+      </select>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
