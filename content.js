@@ -26,7 +26,7 @@ let settings = { ...SETTING_DEFAULTS };
 function loadSettings(callback) {
   chrome.storage.sync.get(SETTING_DEFAULTS, (result) => {
     settings = result;
-    console.log('[MM-Plus] Settings loaded:', settings);
+    console.log('[MM-🔓] Settings loaded:', settings);
     if (callback) callback();
   });
 }
@@ -36,7 +36,7 @@ chrome.storage.onChanged.addListener((changes) => {
   for (const key of Object.keys(changes)) {
     settings[key] = changes[key].newValue;
   }
-  console.log('[MM-Plus] Settings updated live:', settings);
+  console.log('[MM-🔓] Settings updated live:', settings);
 
   // If the timeframe feature was just enabled, kick it off immediately
   if (changes.timeframeEnabled?.newValue || changes.timeframeValue) {
@@ -76,7 +76,7 @@ function findSelectSingleValue() {
  */
 function selectTimeframe(singleValue) {
   const targetLabel = settings.timeframeValue;
-  console.log('[MM-Plus] selectTimeframe called, target:', targetLabel);
+  console.log('[MM-🔓] selectTimeframe called, target:', targetLabel);
 
   // Walk up from the single-value to get the correct control for THIS dropdown
   const control = singleValue.closest('.react-select__control');
@@ -106,18 +106,18 @@ function selectTimeframe(singleValue) {
       clearInterval(pollInterval);
       for (const option of options) {
         if (option.textContent.trim() === targetLabel) {
-          console.log('[MM-Plus] Found target option, clicking:', option.textContent.trim());
+          console.log('[MM-🔓] Found target option, clicking:', option.textContent.trim());
           option.dispatchEvent(new MouseEvent('mousedown', { bubbles: true }));
           option.click();
           dropdownSelected = true;
           return;
         }
       }
-      console.log('[MM-Plus] Target option not found. Labels:', [...options].map(o => o.textContent.trim()));
+      console.log('[MM-🔓] Target option not found. Labels:', [...options].map(o => o.textContent.trim()));
       document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
     } else if (pollCount >= maxPolls) {
       clearInterval(pollInterval);
-      console.log('[MM-Plus] Gave up waiting for menu options, closing');
+      console.log('[MM-🔓] Gave up waiting for menu options, closing');
       document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
     }
   }, 100);
