@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Monarch Money: Unlocked",
-  "version": "2.1",
+  "version": "2.2",
   "description": "Enables clickable URLs from transaction notes and sticky date-range selection for Monarch Money dashboards.",
   "icons": {
     "16": "icons/icon16.png",
