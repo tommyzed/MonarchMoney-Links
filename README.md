@@ -1,5 +1,5 @@
 # Monarch Money: Unlocked
-<img width="128" height="128" alt="icon128" src="https://github.com/user-attachments/assets/9ddab607-953a-40e1-b3de-08eb9fa9f92e" />
+<img width="128" height="128" alt="icon128" src="https://github.com/user-attachments/assets/4a526c0f-79c3-4bb1-aa7f-5603773bbd2d" />
 
 A Chrome Extension that enhances [Monarch Money](https://app.monarch.com) with clickable links in transaction Notes and automatic dashboard timeframe selection.
 
@@ -46,11 +46,10 @@ Settings are saved via `chrome.storage.sync` and take effect immediately — no 
 You can verify this yourself: the entire source is in `content.js` (page logic) and `popup.js` (settings), both plain JavaScript with no obfuscation.
 
 ## Demo
-Settings:
 
-<img width="282" height="280" alt="Screenshot 2026-03-29 at 1 25 15 PM" src="https://github.com/user-attachments/assets/39cc50ff-3160-42bf-b36c-d4eb4e9da024" />
+<img width="283" height="406" alt="Screenshot 2026-03-31 at 12 26 57 PM" src="https://github.com/user-attachments/assets/233a7a1a-37d0-4aa8-9d62-d16d52a926ca" />
 
-Links:
+<br>
 
 <img width="675" height="382" alt="Screenshot 2026-03-05 at 10 18 30 AM" src="https://github.com/user-attachments/assets/a282687a-62d1-4aa9-80d5-2c7b7ade0daa" />
 
