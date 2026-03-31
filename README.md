@@ -3,6 +3,9 @@
 
 A Chrome Extension that enhances [Monarch Money](https://app.monarch.com) with clickable links in transaction Notes and automatic dashboard timeframe selection.
 
+## 🌍 Download the Live Version Now!
+https://chromewebstore.google.com/detail/monarchmoney-plus/doganjddfcohdonjmbnfmjjkloigcpji
+
 ## Features
 
 ### 🔗 Links in Notes
