@@ -9,6 +9,14 @@
  */
 
 // ---------------------------------------------------------------------------
+// Debug flag — enabled via URL parameter ?v=1
+// ---------------------------------------------------------------------------
+
+function isDebugEnabled() {
+  return new URLSearchParams(window.location.search).get('v') === '1';
+}
+
+// ---------------------------------------------------------------------------
 // Settings (loaded from chrome.storage.sync, with defaults)
 // ---------------------------------------------------------------------------
 
@@ -21,12 +29,19 @@ const SETTING_DEFAULTS = {
 let settings = { ...SETTING_DEFAULTS };
 
 /**
+ * Logs to the console only when debugging is enabled via URL.
+ */
+function debugLog(...args) {
+  if (isDebugEnabled()) console.log('[MM-🔓]', ...args);
+}
+
+/**
  * Load settings from chrome.storage.sync, then run the provided callback.
  */
 function loadSettings(callback) {
   chrome.storage.sync.get(SETTING_DEFAULTS, (result) => {
     settings = result;
-    console.log('[MM-🔓] Settings loaded:', settings);
+    debugLog('Settings loaded:', settings);
     if (callback) callback();
   });
 }
@@ -36,7 +51,7 @@ chrome.storage.onChanged.addListener((changes) => {
   for (const key of Object.keys(changes)) {
     settings[key] = changes[key].newValue;
   }
-  console.log('[MM-🔓] Settings updated live:', settings);
+  debugLog('Settings updated live:', settings);
 
   // If the timeframe feature was just enabled, kick it off immediately
   if (changes.timeframeEnabled?.newValue || changes.timeframeValue) {
@@ -76,7 +91,7 @@ function findSelectSingleValue() {
  */
 function selectTimeframe(singleValue) {
   const targetLabel = settings.timeframeValue;
-  console.log('[MM-🔓] selectTimeframe called, target:', targetLabel);
+  debugLog('selectTimeframe called, target:', targetLabel);
 
   // Walk up from the single-value to get the correct control for THIS dropdown
   const control = singleValue.closest('.react-select__control');
@@ -106,18 +121,18 @@ function selectTimeframe(singleValue) {
       clearInterval(pollInterval);
       for (const option of options) {
         if (option.textContent.trim() === targetLabel) {
-          console.log('[MM-🔓] Found target option, clicking:', option.textContent.trim());
+          debugLog('Found target option, clicking:', option.textContent.trim());
           option.dispatchEvent(new MouseEvent('mousedown', { bubbles: true }));
           option.click();
           dropdownSelected = true;
           return;
         }
       }
-      console.log('[MM-🔓] Target option not found. Labels:', [...options].map(o => o.textContent.trim()));
+      debugLog('Target option not found. Labels:', [...options].map(o => o.textContent.trim()));
       document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
     } else if (pollCount >= maxPolls) {
       clearInterval(pollInterval);
-      console.log('[MM-🔓] Gave up waiting for menu options, closing');
+      debugLog('Gave up waiting for menu options, closing');
       document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
     }
   }, 100);

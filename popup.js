@@ -50,3 +50,7 @@ $timeframe.addEventListener('change', () => {
   save();
 });
 $timeframeValue.addEventListener('change', save);
+
+// Display version number
+const manifestData = chrome.runtime.getManifest();
+document.getElementById('versionDisplay').textContent = `v${manifestData.version}`;
