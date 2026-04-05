@@ -52,9 +52,11 @@ You can verify this yourself: the entire source is in `content.js` (page logic) 
 
 ## Demo
 
-<img width="283" height="406" alt="Screenshot 2026-03-31 at 12 26 57 PM" src="https://github.com/user-attachments/assets/233a7a1a-37d0-4aa8-9d62-d16d52a926ca" />
+### Options
 
-<br>
+<img width="297" height="440" alt="Screenshot 2026-04-05 at 2 24 27 PM" src="https://github.com/user-attachments/assets/0af0f94d-6a86-4e3d-949a-c45fd0152dea" />
+
+### Links from Notes
 
 <img width="675" height="382" alt="Screenshot 2026-03-05 at 10 18 30 AM" src="https://github.com/user-attachments/assets/a282687a-62d1-4aa9-80d5-2c7b7ade0daa" />
 
@@ -91,6 +93,10 @@ Load settings from chrome.storage.sync
 ```
 
 ## Installation
+
+BEST: https://chromewebstore.google.com/detail/monarchmoney-plus/doganjddfcohdonjmbnfmjjkloigcpji
+
+-- or --
 
 1. Download or clone this repository to your machine.
 2. Open Chrome and navigate to `chrome://extensions/`
